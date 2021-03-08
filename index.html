@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="js/game.js"></script>
+    <title>Chess</title>
+    <style>
+        .grid-container {
+            display: grid;
+            background-color: #2196F3;
+            padding: 10px;
+            grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px;
+            grid-template-rows: 80px 80px 80px 80px 80px 80px 80px 80px;
+            column-gap: 0;
+            row-gap: 0;
+        }
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            font-size: 30px;
+            text-align: center;
+            width: 80px;
+            height: 80px;            
+        }
+        .green{
+            background-color: #2e8c2e;
+        }
+        img{
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item" id="container">
+            <img id="item" src="assets/pieces/Chess_rdt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_ndt45.svg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_bdt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_qdt45.svg" alt="">
+        </div>
+        <div class="grid-item ">
+            <img src="assets/pieces/Chess_kdt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_bdt45.svg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_ndt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_rdt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_pdt45.svg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_pdt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_pdt45.svg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_pdt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_pdt45.svg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_pdt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_pdt45.svg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_pdt45.svg" alt="">
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item green"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_plt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_plt45.svg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_plt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_plt45.svg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_plt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_plt45.svg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_plt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_plt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_rlt45.svg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_nlt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_blt45.svg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_qlt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_klt45.svg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_blt45.svg" alt="">
+        </div>
+        <div class="grid-item green">
+            <img src="assets/pieces/Chess_nlt45.svg" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="assets/pieces/Chess_rlt45.svg" alt="">
+        </div>
+    </div>
+
+    <!-- Drag and Drop functionality-->
+    <script>
+        var dragItem = document.querySelector("#item");
+        var container = document.querySelector("#container");
+    
+        var active = false;
+        var currentX;
+        var currentY;
+        var initialX;
+        var initialY;
+        var xOffset = 0;
+        var yOffset = 0;
+    
+        container.addEventListener("touchstart", dragStart, false);
+        container.addEventListener("touchend", dragEnd, false);
+        container.addEventListener("touchmove", drag, false);
+    
+        container.addEventListener("mousedown", dragStart, false);
+        container.addEventListener("mouseup", dragEnd, false);
+        container.addEventListener("mousemove", drag, false);
+    
+        function dragStart(e) {
+          if (e.type === "touchstart") {
+            initialX = e.touches[0].clientX - xOffset;
+            initialY = e.touches[0].clientY - yOffset;
+          } else {
+            initialX = e.clientX - xOffset;
+            initialY = e.clientY - yOffset;
+          }
+    
+          if (e.target === dragItem) {
+            active = true;
+          }
+        }
+    
+        function dragEnd(e) {
+          initialX = currentX;
+          initialY = currentY;
+    
+          active = false;
+        }
+    
+        function drag(e) {
+          if (active) {
+          
+            e.preventDefault();
+          
+            if (e.type === "touchmove") {
+              currentX = e.touches[0].clientX - initialX;
+              currentY = e.touches[0].clientY - initialY;
+            } else {
+              currentX = e.clientX - initialX;
+              currentY = e.clientY - initialY;
+            }
+    
+            xOffset = currentX;
+            yOffset = currentY;
+    
+            setTranslate(currentX, currentY, dragItem);
+          }
+        }
+    
+        function setTranslate(xPos, yPos, el) {
+          el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+        }
+      </script>
+</body>
+</html>
